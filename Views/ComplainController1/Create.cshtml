@@ -1,0 +1,37 @@
+﻿@model FinalProject.Models.Complain
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Please Add Your Complain</h1>
+<!DOCTYPE html>
+<html>
+<head>
+ 
+</head>
+<body>
+    <form class="form-horizontal" asp-action="Create">
+
+<div class="form-group">
+    @Html.TextBoxFor(e => e.Id, new { @class = "form-control", placeholder = "Id*" })
+    @Html.ValidationMessageFor(e => e.Id)
+</div>
+        <div class="form-group">
+            @Html.TextBoxFor(e => e.Category, new { @class = "form-control", placeholder = "Category*" })
+            @Html.ValidationMessageFor(e => e.Category)
+        </div>
+        <div class="form-group">
+            @Html.TextBoxFor(e => e.Description, new { @class = "form-control", placeholder = "Description*" })
+            @Html.ValidationMessageFor(e => e.Description)
+        </div>
+        <div class="form-group">
+            @Html.TextBoxFor(e => e.Status, new { @class = "form-control", placeholder = "Status*" })
+            @Html.ValidationMessageFor(e => e.Status)
+        </div>
+        <div>
+            <input type="submit" class="btnRegister" value="Submit" />
+        </div>
+</form>
+    </body>
+    </html>
+
